@@ -210,8 +210,9 @@
     height: 150px;
   }
   .playerName {
-    font-size: 20px;
-    padding: 6px 12px;
+    font-size: 13px;
+    padding: 4px 8px;
+    letter-spacing: 0.5px;
   }
   .flag {
     width: 40px;
