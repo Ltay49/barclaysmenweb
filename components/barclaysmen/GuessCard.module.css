@@ -201,3 +201,29 @@
   background: #D4A800;
   color: black;
 }
+
+@media (max-width: 600px) {
+  .card {
+    height: 150px;
+  }
+  .playerImg {
+    height: 150px;
+  }
+  .playerName {
+    font-size: 20px;
+    padding: 6px 12px;
+  }
+  .flag {
+    width: 40px;
+    height: 26px;
+  }
+  .flagBlock {
+    width: 56px;
+    min-width: 56px;
+  }
+  .season {
+    width: 22px;
+    height: 22px;
+    font-size: 9px;
+  }
+}
