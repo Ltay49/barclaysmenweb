@@ -5,17 +5,17 @@
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   overflow: hidden;
-  width: 530px;
+  width: 100%;
+  max-width: 530px;
   height: 180px;
   justify-self: center;
-  /* clip bottom/sides but allow top bleed */
   clip-path: inset(0 0 0 0 round 10px);
 }
 
 /* ── Left col: image + rotated name + badges ── */
 .imageCol {
   position: relative;
-  width: 200px;
+  width: clamp(100px, 35%, 200px);
   flex-shrink: 0;
   overflow: hidden;
   display: flex;
@@ -184,11 +184,12 @@
 
 .stat {
   font-family: "Luckiest Guy", cursive;
-  font-size: 20px;
+  font-size: clamp(11px, 3vw, 20px);
   color: white;
   background: black;
   border-radius: 20px;
-  padding: 4px 12px;
+  padding: 4px 8px;
+  white-space: nowrap;
 }
 
 .statCorrect {
