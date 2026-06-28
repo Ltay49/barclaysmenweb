@@ -1,0 +1,202 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid black;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 530px;
+  height: 180px;
+  justify-self: center;
+  /* clip bottom/sides but allow top bleed */
+  clip-path: inset(0 0 0 0 round 10px);
+}
+
+/* ── Left col: image + rotated name + badges ── */
+.imageCol {
+  position: relative;
+  width: 200px;
+  flex-shrink: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  background: rgba(0, 0, 50, 0.3);
+  border-radius: 10px 0 0 10px;
+}
+
+.imageCol::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(to top, rgba(0, 0, 30, 0.85), transparent);
+  z-index: 1;
+  border-radius: 0 0 0 10px;
+}
+
+.playerImg {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 180px;
+  width: auto;
+  object-fit: contain;
+  z-index: 0;
+}
+
+.playerName {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 28px;
+  color: beige;
+  text-shadow: 2px 1px 1px black;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  /* white-space: nowrap; */
+  position: relative;
+  z-index: 3;
+  padding: 10px 20px;
+  line-height: 1;
+  letter-spacing: 1px;
+}
+
+.badges {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+}
+
+.badge {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  transition: opacity 0.2s;
+}
+
+/* ── Right col ── */
+.statsCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  gap: 6px;
+  min-width: 0;
+}
+
+/* ── Top row: flag cell | seasons grid ── */
+.topRow {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: stretch;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Dedicated flag cell — fixed width, stacks flag image over country code */
+.flagBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: 72px;
+  min-width: 72px;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  padding: 6px 4px;
+}
+
+.flag {
+  width: 52px;
+  height: 34px;
+  border-radius: 3px;
+  object-fit: cover;
+  display: block;
+}
+
+.nationality {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 12px;
+  color: white;
+  background: #333;
+  border-radius: 5px;
+  padding: 2px 4px;
+  text-align: center;
+  width: 100%;
+  letter-spacing: 1px;
+}
+
+.nationalityCorrect {
+  background: green !important;
+}
+
+/* ── Seasons grid — fills remaining space ── */
+.seasonsBox {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-content: flex-start;
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 8px;
+  padding: 6px;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.season {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 11px;
+  color: black;
+  background: rgba(210, 210, 210, 0.9);
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.seasonCorrect {
+  background: green;
+  color: white;
+}
+
+/* ── Stats pills ── */
+.numbersRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.stat {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 20px;
+  color: white;
+  background: black;
+  border-radius: 20px;
+  padding: 4px 12px;
+}
+
+.statCorrect {
+  background: green;
+  color: white;
+}
+
+.statClose {
+  background: #D4A800;
+  color: black;
+}

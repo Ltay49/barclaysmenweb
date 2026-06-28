@@ -1,0 +1,92 @@
+.background {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  filter: blur(0);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: 0;
+}
+
+.overlay {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 40px;
+  padding: 24px 20px;
+  border-radius: 16px;
+  width: min(360px, 90vw);
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.playButton {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 52px;
+  letter-spacing: 4px;
+  color: #ffffff;
+  background: #0063a1;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 0px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 0 #001c2e, 0 6px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+
+.playButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 0 #004472, 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.playButton:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #004472, 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.howToPlayButton {
+  font-family: "Varela Round", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #aabaca;
+  background: transparent;
+  border: 2px solid #0063a1;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+  letter-spacing: 0.5px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.howToPlayButton:hover {
+  background: #0063a1;
+  color: white;
+}

@@ -1,0 +1,167 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  background: rgba(10, 10, 30, 0.98);
+  border: 3px solid #0063a1;
+  border-radius: 14px;
+  width: min(460px, 92vw);
+  max-height: 88vh;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+}
+
+.titleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #0063a1;
+  padding-bottom: 12px;
+}
+
+.title {
+  font-family: "Luckiest Guy", cursive;
+  color: white;
+  font-size: 26px;
+  letter-spacing: 2px;
+  -webkit-text-stroke: 1px #0063a1;
+}
+
+.closeBtn {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.closeBtn:hover { background: rgba(255,255,255,0.25); }
+
+.intro {
+  font-family: "Varela Round", sans-serif;
+  font-size: 13px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.5;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.stepNum {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 22px;
+  color: #0063a1;
+  width: 28px;
+  flex-shrink: 0;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.stepHead {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 15px;
+  color: white;
+  letter-spacing: 0.5px;
+  margin-bottom: 3px;
+}
+
+.stepBody {
+  font-family: "Varela Round", sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.4;
+}
+
+.divider {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.sectionLabel {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 13px;
+  color: #4da8da;
+  letter-spacing: 1px;
+}
+
+.colourRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.colourDesc {
+  font-family: "Varela Round", sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.7);
+}
+
+.exampleRow {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.caption {
+  font-family: "Varela Round", sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.5;
+}
+
+.pillGreen {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 13px;
+  color: white;
+  background: #2ecc40;
+  border-radius: 20px;
+  padding: 4px 12px;
+  display: inline-block;
+}
+
+.pillYellow {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 13px;
+  color: black;
+  background: #D4A800;
+  border-radius: 20px;
+  padding: 4px 12px;
+  display: inline-block;
+}
+
+.pillGrey {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 13px;
+  color: black;
+  background: rgba(210,210,210,0.9);
+  border-radius: 20px;
+  padding: 4px 12px;
+  display: inline-block;
+}
